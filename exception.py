@@ -16,7 +16,7 @@ class CustomException(Exception):
     def __str__(self) -> str:
         return self.error_message
 
-try:
-    print(1/0)
-except Exception as e:
-    raise CustomException(e)
+# try:
+#     print(1/0)
+# except Exception as e:
+#     raise CustomException(e)
