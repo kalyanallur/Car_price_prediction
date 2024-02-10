@@ -3,6 +3,7 @@ import pandas as pd
 from exception import CustomException
 from logger import logging
 from sklearn.model_selection import train_test_split
+from data_transformation import DataTransformation
 
 class Data_ingestion :
 
@@ -34,3 +35,6 @@ class Data_ingestion :
 
 obj = Data_ingestion()
 train_df, test_df = obj.get_data(r"C:\Users\HP\Desktop\Used cars prediction\data\cars_data.csv")
+
+transformer_obj = DataTransformation()
+transformed_train_df,transformed_test_df = transformer_obj.transform_data(train_df, test_df)
